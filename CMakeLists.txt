@@ -18,6 +18,9 @@ include(FeatureSummary)
 
 find_package(Qt5 COMPONENTS Core Gui Quick Sql DBus LinguistTools REQUIRED)
 
+#set(WATCHFISH_FEATURES "notificationmonitor;walltime;music;calendar;voicecall;volume")
+set(WATCHFISH_FEATURES "voicecall")
+set(FLAVOR "uuitk") # FIXME
 add_subdirectory(libwatchfish)
 
 file(GLOB TS_FILES translation/*.ts)
@@ -38,6 +41,8 @@ add_executable(exphone-daemon
   src/blockitem.h
   src/blockmodel.cpp
   src/blockmodel.h
+  src/blockcontroler.cpp
+  src/blockcontroler.h
 )
 
 QT5_ADD_TRANSLATION(QM_FILES ${TS_FILES})
