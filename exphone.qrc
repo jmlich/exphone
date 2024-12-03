@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/exphone.qml</file>
+        <file>icons/172x172/exphone.png</file>
+    </qresource>
+</RCC>

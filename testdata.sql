@@ -1,0 +1,16 @@
+INSERT INTO blocks (number, name, note, count, lastSeen, blocked) VALUES
+('420123456789', 'Liam Novak', 'Frequent caller', 12, DATETIME('now', '-1 day'), 0),
+('491234567890', 'Emma Fischer', 'Project partner', 7, DATETIME('now', '-2 days'), 1),
+('441234567890', 'Noah Smith', 'Friend from UK', 5, DATETIME('now', '-3 days'), 0),
+('331234567890', 'Olivia Dupont', 'Old contact', 2, DATETIME('now', '-4 days'), 0),
+('391234567890', 'Elena Rossi', 'Colleague', 9, DATETIME('now', '-5 days'), 0),
+('351234567890', 'Lucas Santos', 'Family friend', 4, DATETIME('now', '-6 days'), 1),
+('431234567890', 'Sophia Müller', 'Business inquiry', 15, DATETIME('now', '-1 week'), 0),
+('341234567890', 'Alexander López', 'University peer', 6, DATETIME('now', '-2 weeks'), 0),
+('471234567890', 'Mia Schneider', 'Blocked for spam', 3, DATETIME('now', '-10 days'), 1),
+('381234567890', 'Benjamin Weber', 'Frequent collaborator', 8, DATETIME('now', '-8 days'), 0),
+('481234567890', 'Charlotte Kovács', 'Hungarian friend', 11, DATETIME('now', '-12 days'), 0),
+('321234567890', 'Amelia Lefevre', 'French partner', 7, DATETIME('now', '-15 days'), 0),
+('451234567890', 'Daniel Johansson', 'Swedish colleague', 5, DATETIME('now', '-20 days'), 0),
+('421234567890', 'Emily Dvořák', 'Czech acquaintance', 10, DATETIME('now', '-25 days'), 0),
+('441234567891', 'Oliver O’Connor', 'Irish family', 1, DATETIME('now', '-30 days'), 0);
