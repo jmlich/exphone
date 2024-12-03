@@ -6,7 +6,7 @@
 
 #include <QAbstractListModel>
 
-#define DB_FILE "./blockmodel.db"
+#define DB_FILE "blockmodel.db"
 
 class BlockModel : public QAbstractListModel
 {

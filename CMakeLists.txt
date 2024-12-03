@@ -18,11 +18,11 @@ include(FeatureSummary)
 
 enable_testing()
 
-find_package(Qt5 COMPONENTS Core Gui Quick Sql LinguistTools REQUIRED)
+find_package(Qt5 COMPONENTS Core Gui Quick Sql DBus LinguistTools REQUIRED)
 
 file(GLOB TS_FILES translation/*.ts)
 
-add_executable(exphone WIN32
+add_executable(exphone
   src/main.cpp
   src/blockitem.cpp
   src/blockitem.h
@@ -30,6 +30,14 @@ add_executable(exphone WIN32
   src/blockmodel.h
   exphone.qrc
   ${TS_FILES}
+)
+
+add_executable(exphone-daemon
+  src/daemon.cpp
+  src/blockitem.cpp
+  src/blockitem.h
+  src/blockmodel.cpp
+  src/blockmodel.h
 )
 
 QT5_ADD_TRANSLATION(QM_FILES ${TS_FILES})
@@ -59,8 +67,17 @@ QT5_CREATE_TRANSLATION(QT_FILES "${CMAKE_SOURCE_DIR}"
 install(TARGETS exphone RUNTIME
         DESTINATION ${CMAKE_INSTALL_BINDIR})
 
+install(TARGETS exphone-daemon RUNTIME
+        DESTINATION ${CMAKE_INSTALL_BINDIR})
+
 target_compile_definitions(exphone
   PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
+
 target_link_libraries(exphone
   PRIVATE Qt5::Core Qt5::Gui Qt5::Sql Qt5::Quick)
 
+target_compile_definitions(exphone-daemon
+  PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
+
+target_link_libraries(exphone-daemon
+  PRIVATE Qt5::Core Qt5::Gui Qt5::Sql Qt5::Quick Qt5::DBus)

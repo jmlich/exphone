@@ -1,5 +1,6 @@
 #include "blockmodel.h"
 #include <QtSql>
+#include <QDir>
 
 BlockModel::BlockModel(QObject *parent) :
     QAbstractListModel(parent)
@@ -46,12 +47,18 @@ int BlockModel::rowCount(const QModelIndex &) const{
 }
 
 void BlockModel::initDb() {
+    QDir appDataDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
+
+    if (!appDataDir.exists()) {
+        appDataDir.mkpath(".");
+    }
+
     if (!QSqlDatabase::isDriverAvailable("QSQLITE")) {
         qFatal("SQLite driver not available");
     }
 
     QSqlDatabase m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName(DB_FILE);
+    m_db.setDatabaseName(appDataDir.filePath(DB_FILE));
 
     if (!m_db.open()) {
         qFatal("Failed to open database: %s", qPrintable(m_db.lastError().text()));
