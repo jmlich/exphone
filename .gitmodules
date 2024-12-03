@@ -1,0 +1,3 @@
+[submodule "libwatchfish"]
+	path = libwatchfish
+	url = git@github.com:piggz/libwatchfish.git

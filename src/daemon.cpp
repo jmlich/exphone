@@ -20,6 +20,7 @@
 #include <QStandardPaths>
 
 #include "blockmodel.h"
+#include "../libwatchfish/voicecallcontroller.h"
 
 static void daemonize();
 static void signalHandler(int sig);
@@ -51,6 +52,8 @@ int main(int argc, char **argv)
 
     BlockModel blockModel;
     blockModel.initDb();
+
+    watchfish::VoiceCallController m_voiceCallController;
 
     return app.exec();
 }

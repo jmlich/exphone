@@ -16,9 +16,9 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(GNUInstallDirs)
 include(FeatureSummary)
 
-enable_testing()
-
 find_package(Qt5 COMPONENTS Core Gui Quick Sql DBus LinguistTools REQUIRED)
+
+add_subdirectory(libwatchfish)
 
 file(GLOB TS_FILES translation/*.ts)
 
