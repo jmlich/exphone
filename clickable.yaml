@@ -6,4 +6,5 @@ build_args:
 kill: exphone
 prebuild: git submodule update --init
 ignore_review_errors: true
-
+dependencies_target:
+- libtelepathy-qt5-dev
