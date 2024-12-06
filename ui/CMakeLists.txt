@@ -1,5 +1,12 @@
 file(GLOB TS_FILES translation/*.ts)
 
+#flavor_uuitk {
+#    DEFINES += TRANSLATION_FOLDER=\\\"./translations\\\"
+#} else {
+#    DEFINES += TRANSLATION_FOLDER=\\\"$${PREFIX}/share/$${TARGET}/translations\\\"
+#}
+
+
 add_executable(exphone
   main.cpp
   exphone.qrc

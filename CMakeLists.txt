@@ -21,6 +21,9 @@ find_package(Qt5 COMPONENTS Core Gui Quick Sql DBus LinguistTools REQUIRED)
 #set(WATCHFISH_FEATURES "notificationmonitor;walltime;music;calendar;voicecall;volume")
 set(WATCHFISH_FEATURES "voicecall")
 
+# FIXME platform files install path PREFIX ...
+# 
+
 if(NOT DEFINED FLAVOR)
     message(FATAL_ERROR "Please specify the platform using -DFLAVOR=platform as a CMake option. Supported platforms: kirigami, silica, qtcontrols, uuitk.")
 elseif(FLAVOR STREQUAL "silica")
