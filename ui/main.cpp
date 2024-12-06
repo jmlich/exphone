@@ -58,19 +58,19 @@ int main(int argc, char *argv[])
 
     view->rootContext()->setContextProperty("BlockModel", &blockmodel);
 
-#ifdef MER_EDITION_SAILFISH
-    view->setSource(SailfishApp::pathTo("qml/exphone.qml"));
-    view->show();
-#elif UUITK_EDITION
-    view->load("./share/exphone/qml/exphone.qml");
-#else
+//#ifdef MER_EDITION_SAILFISH
+//    view->setSource(SailfishApp::pathTo("qml/exphone.qml"));
+//    view->show();
+//#elif UUITK_EDITION
+//    view->load("./share/exphone/qml/exphone.qml");
+//#else
     view->load(QUrl("qrc:/qml/exphone.qml"));
 
     if (QQuickWindow* window = qobject_cast<QQuickWindow*>(view->rootObjects().at(0))) {
         window->setIcon(QIcon(":/icons/172x172/exphone.png"));
     }
 
-#endif
+//#endif
 
     return app->exec();
 
