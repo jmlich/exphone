@@ -19,7 +19,6 @@ void BlockControler::onRingingChanged() {
         QString callerId = m_voiceCallController.callerId();
         QString callerName = m_voiceCallController.findPersonByNumber(callerId);
         incomingCall(callerId, callerName);
-
     }
 #endif
 }
@@ -30,6 +29,7 @@ void BlockControler::incomingCall(const QString &_callerId, const QString &calle
     bool blocked = m_blockModel.isBlocked(callerId);
     qDebug() << Q_FUNC_INFO << callerId << callerName << blocked;
     if (blocked) {
+        m_blockModel.upsertItem(callerId, callerName);
 #if defined(MER_EDITION_SAILFISH) || defined(UUITK_EDITION)
         m_voiceCallController.hangup();
 #endif

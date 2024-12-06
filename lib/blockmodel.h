@@ -19,6 +19,7 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     Q_INVOKABLE void addItem(const QString& number, const QString& name, const QString& note, bool blocked);
+    Q_INVOKABLE void upsertItem(const QString& number, const QString& name);
     Q_INVOKABLE void setBlocked(const QString& number, bool blocked);
     Q_INVOKABLE void removeItem(const QString& number);
     Q_INVOKABLE bool isBlocked(QString& number);

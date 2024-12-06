@@ -68,11 +68,11 @@ void BlockModel::initDb() {
     QSqlQuery query;
     query.exec("CREATE TABLE IF NOT EXISTS blocks ("
                "number VARCHAR(32) PRIMARY KEY NOT NULL,"
-               "name VARCHAR(32) NOT NULL,"
-               "note VARCHAR(32) NOT NULL,"
+               "name VARCHAR(32) NOT NULL DEFAULT '',"
+               "note VARCHAR(32) NOT NULL DEFAULT '',"
                "lastSeen DATETIME DEFAULT CURRENT_TIMESTAMP,"
                "blocked BOOLEAN DEFAULT 0,"
-               "count INT)");
+               "count INT DEFAULT 0)");
 }
 
 void BlockModel::loadAll() {
@@ -118,6 +118,30 @@ void BlockModel::addItem(const QString& number, const QString& name, const QStri
     loadAll();
 
 }
+
+
+void BlockModel::upsertItem(const QString& number, const QString& name) {
+    QSqlQuery query;
+    query.prepare(R"(
+        INSERT INTO blocks (number, name, lastSeen, blocked)
+        VALUES (:number, :name, CURRENT_TIMESTAMP, 0)
+        ON CONFLICT(number) DO UPDATE SET
+            lastSeen = CURRENT_TIMESTAMP,
+            count = count + 1
+        WHERE number = :number;
+    )");
+    query.bindValue(":number", number);
+    query.bindValue(":name", name);
+
+    if (!query.exec()) {
+        qWarning() << "Failed to insert into blocks table:" << query.lastError().text();
+    } else {
+        qDebug() << "Successfully added item to blocks table:" << number << name;
+    }
+
+    loadAll();
+}
+
 
 void BlockModel::setBlocked(const QString& number, bool blocked) {
     qDebug() << Q_FUNC_INFO << number << blocked;
