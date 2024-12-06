@@ -6,8 +6,9 @@ BlockControler::BlockControler(QObject *parent) :
 
     m_blockModel.initDb();
 
+#if defined(MER_EDITION_SAILFISH) || defined(UUITK_EDITION)
     connect(&m_voiceCallController, &watchfish::VoiceCallController::ringingChanged, this, &BlockControler::onRingingChanged);
-
+#endif
 }
 
 void BlockControler::onRingingChanged() {
@@ -29,6 +30,8 @@ void BlockControler::incomingCall(const QString &_callerId, const QString &calle
     bool blocked = m_blockModel.isBlocked(callerId);
     qDebug() << Q_FUNC_INFO << callerId << callerName << blocked;
     if (blocked) {
+#if defined(MER_EDITION_SAILFISH) || defined(UUITK_EDITION)
         m_voiceCallController.hangup();
+#endif
     }
 }

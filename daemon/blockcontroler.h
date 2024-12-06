@@ -16,7 +16,9 @@ private:
 
     BlockModel m_blockModel;
 
+#if defined(MER_EDITION_SAILFISH) || defined(UUITK_EDITION)
     watchfish::VoiceCallController m_voiceCallController;
+#endif
 
     void incomingCall(const QString &callerId, const QString &callerName);
 
