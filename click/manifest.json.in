@@ -1,0 +1,15 @@
+{
+    "name": "com.github.jmlich.exphone",
+    "description": "Phone calls blocking app",
+    "architecture": "@CLICK_ARCH@",
+    "title": "exPhone",
+    "hooks": {
+        "harbour-amazfish": {
+            "apparmor": "exphone.apparmor",
+            "desktop":  "exphone.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Jozef Mlich <jmlich83@gmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}

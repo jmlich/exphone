@@ -6,8 +6,6 @@ add_executable(exphone
   ${TS_FILES}
 )
 
-
-
 QT5_ADD_TRANSLATION(QM_FILES ${TS_FILES})
 add_custom_target(translations DEPENDS ${QM_FILES})
 add_dependencies(exphone translations)
@@ -22,11 +20,11 @@ target_compile_definitions(exphone
   PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
 target_link_libraries(exphone
-  PRIVATE exphone-lib Qt5::Core Qt5::Gui Qt5::Sql Qt5::Quick)
+  PRIVATE exphone-lib libwatchfish Qt5::Core Qt5::Gui Qt5::Sql Qt5::Quick)
 
 
-# install(FILES ${QM_FILES}
-#    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/exphone/translation")
+install(FILES ${QM_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/exphone/translation")
 
 #install(FILES "exphone.desktop"
 #    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")

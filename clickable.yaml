@@ -1,0 +1,9 @@
+clickable_minimum_required: 8.0.0
+framework: ubuntu-sdk-20.04
+builder: cmake
+build_args:
+- -DFLAVOR=uuitk
+kill: exphone
+prebuild: git submodule update --init
+ignore_review_errors: true
+
