@@ -20,7 +20,20 @@ find_package(Qt5 COMPONENTS Core Gui Quick Sql DBus LinguistTools REQUIRED)
 
 #set(WATCHFISH_FEATURES "notificationmonitor;walltime;music;calendar;voicecall;volume")
 set(WATCHFISH_FEATURES "voicecall")
-set(FLAVOR "kirigami") # FIXME
+
+if(NOT DEFINED FLAVOR)
+    message(FATAL_ERROR "Please specify the platform using -DFLAVOR=platform as a CMake option. Supported platforms: kirigami, silica, qtcontrols, uuitk.")
+elseif(FLAVOR STREQUAL "silica")
+    add_definitions(-Dflavor_silica)
+#elseif(FLAVOR STREQUAL "kirigami")
+#    add_definitions(-Dflavor_kirigami)
+#elseif(FLAVOR STREQUAL "qtcontrols")
+#    add_definitions(-Dflavor_qtcontrols)
+elseif(FLAVOR STREQUAL "uuitk")
+    add_definitions(-Dflavor_uuitk)
+else()
+    message(FATAL_ERROR "Unsupported platform '${FLAVOR}'. Supported platforms: kirigami, silica, qtcontrols, uuitk.")
+endif()
 
 add_subdirectory(libwatchfish)
 add_subdirectory(lib)
