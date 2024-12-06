@@ -1,6 +1,6 @@
 #!/bin/sh
 
-UNIT_FILE=$HOME/.config/systemd/user/exphone.service
+UNIT_FILE=$HOME/.config/systemd/user/exphoned.service
 
 if [ ! -f "$UNIT_FILE" ]; then
 
