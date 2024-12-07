@@ -2,14 +2,6 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
-    <name>DownloadDataMenuItem</name>
-    <message>
-        <location filename="../qml/components/DownloadDataMenuItem.qml" line="6"/>
-        <source>Download Data</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>EditPage</name>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="8"/>
@@ -69,14 +61,6 @@
         <location filename="../qml/pages/EditPage.qml" line="75"/>
         <location filename="../qml/pages/EditPage.qml" line="75"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>GraphData</name>
-    <message>
-        <location filename="../qml/components/GraphData.qml" line="304"/>
-        <source>No data</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
