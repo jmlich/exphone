@@ -6,23 +6,27 @@ PageListPL  {
     id: page
     title: qsTr("Blocked numbers")
 
+    pageMenu: PageMenuPL {
+        PageMenuItemPL {
+            text: qsTr("Add number")
+            iconSource: styler.iconEdit
+            onClicked: {
+                app.pages.push(Qt.resolvedUrl("EditPage.qml"), {})
+            }
+        }
+    }
 
     model: BlockModel
     placeholderEnabled: BlockModel.count === 0
     placeholderText: qsTr("No records, make phone call or add number manually")
+
     delegate: ListItemPL {
         contentHeight: details.height
-        menu: ContextMenuPL {
-            ContextMenuItemPL {
-                text: "delete"
-                onClicked: {
-                    BlockModel.removeItem(model.number)
-                }
-            }
-        }
 
         onClicked: {
-            BlockModel.setBlocked(model.number, !model.blocked)
+            var item = BlockModel.get(index)
+            console.log(JSON.stringify(item));
+            app.pages.push(Qt.resolvedUrl("EditPage.qml"), item)
         }
 
         Column {
@@ -51,19 +55,6 @@ PageListPL  {
                 font.pixelSize: styler.themeFontSizeSmall
             }
 
-            //         Label {
-            //             text: model.lastSeen
-            //         }
-        }
-    }
-
-    pageMenu: PageMenuPL {
-        PageMenuItemPL {
-            text: qsTr("Add number")
-            iconSource: styler.iconEdit
-            onClicked: {
-                app.pages.push(Qt.resolvedUrl("EditPage.qml"))
-            }
         }
     }
 
