@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="en">
 <context>
     <name>EditPage</name>
     <message>
@@ -16,14 +18,14 @@
     <message>
         <location filename="../qml/pages/EditPage.qml" line="27"/>
         <location filename="../qml/pages/EditPage.qml" line="27"/>
-        <source>Number</source>
-        <translation>Number</translation>
+        <source>Phone number</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="33"/>
         <location filename="../qml/pages/EditPage.qml" line="33"/>
-        <source>Contact name</source>
-        <translation>Contact name</translation>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="37"/>
