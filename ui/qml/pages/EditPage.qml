@@ -16,19 +16,20 @@ PagePL  {
 
         TextFieldPL {
             id: addNumber
-            placeholderText: "number"
+            placeholderText: qsTr("Number")
             inputMethodHints: Qt.ImhDialableCharactersOnly
         }
         TextFieldPL {
             id: addName
-            placeholderText: "name"
+            placeholderText: qsTr("Contact name")
         }
         TextFieldPL {
             id: addNote
-            placeholderText: "note"
+            placeholderText: qsTr("Note")
         }
         ButtonPL {
-            text: "Add"
+            text: qsTr("Add to blacklist")
+            anchors.horizontalCenter: parent.horizontalCenter
             onClicked: {
                 BlockModel.addItem(addNumber.text, addName.text, addNote.text, true);
                 app.pages.pop();

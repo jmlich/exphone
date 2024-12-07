@@ -5,7 +5,6 @@
 BlockModel::BlockModel(QObject *parent) :
     QAbstractListModel(parent)
 {
-
 }
 
 QHash<int, QByteArray> BlockModel::roleNames() const  {
@@ -78,7 +77,6 @@ void BlockModel::initDb() {
 }
 
 void BlockModel::loadAll() {
-    qDebug() << Q_FUNC_INFO;
 
     beginResetModel();
     m_blocks.clear();
@@ -96,6 +94,9 @@ void BlockModel::loadAll() {
     }
     endResetModel();
     emit rowCountChanged();
+
+    qDebug() << Q_FUNC_INFO << m_blocks.count();
+
 }
 
 void BlockModel::addItem(const QString& number, const QString& name, const QString& note, bool blocked) {
@@ -114,7 +115,7 @@ void BlockModel::addItem(const QString& number, const QString& name, const QStri
     if (!query.exec()) {
         qWarning() << Q_FUNC_INFO << "Failed to insert into blocks table:" << query.lastError().text();
     } else {
-        qDebug() << "Successfully added item to blocks table:" << number << name;
+        qDebug() << Q_FUNC_INFO << "Successfully added item to blocks table:" << number << name;
     }
 
     loadAll();
@@ -138,7 +139,7 @@ void BlockModel::upsertItem(const QString& number, const QString& name) {
     if (!query.exec()) {
         qWarning() << Q_FUNC_INFO << "Failed to upsert into blocks table:" << query.lastError().text();
     } else {
-        qDebug() << "Successfully upserted item into blocks table:" << number << name;
+        qDebug() << Q_FUNC_INFO << "Successfully upserted item into blocks table:" << number << name;
     }
 
     loadAll();
@@ -146,7 +147,6 @@ void BlockModel::upsertItem(const QString& number, const QString& name) {
 
 
 void BlockModel::setBlocked(const QString& number, bool blocked) {
-    qDebug() << Q_FUNC_INFO << number << blocked;
 
     QSqlQuery query;
     query.prepare("UPDATE blocks SET blocked = :blocked WHERE number = :number");
@@ -156,7 +156,7 @@ void BlockModel::setBlocked(const QString& number, bool blocked) {
     if (!query.exec()) {
         qWarning() << Q_FUNC_INFO << "Failed to update blocked settings:" << query.lastError().text();
     } else {
-        qDebug() << "Successfully set:" << number << " blocked "<< blocked;
+        qDebug() << Q_FUNC_INFO << "Successfully set:" << number << " blocked "<< blocked;
     }
 
     loadAll();
@@ -170,7 +170,7 @@ void BlockModel::removeItem(const QString& number) {
     if (!query.exec()) {
         qWarning() << Q_FUNC_INFO << "Failed to delete from blocks table:" << query.lastError().text();
     } else {
-        qDebug() << "Successfully removed item from blocks table:" << number;
+        qDebug() << Q_FUNC_INFO << "Successfully removed item from blocks table:" << number;
     }
 
     loadAll();

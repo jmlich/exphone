@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Icon=exphone.png
+Icon=share/icons/hicolor/512x512/apps/exphone.png
 Exec=./bin/run.sh
 Name=exPhone
 X-Ubuntu-Touch=true

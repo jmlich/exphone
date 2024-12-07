@@ -19,16 +19,10 @@ PageListPL  {
                     BlockModel.removeItem(model.number)
                 }
             }
-            ContextMenuItemPL {
-                text: "block/unblock"
-                onClicked: {
-                    BlockModel.setBlocked(model.number, !model.blocked)
-                }
-            }
         }
 
         onClicked: {
-            console.log("clicked on " + model.number)
+            BlockModel.setBlocked(model.number, !model.blocked)
         }
 
         Column {
@@ -48,10 +42,12 @@ PageListPL  {
                 visible: text !== ""
             }
             LabelPL {
-                text: model.lastSeen
+                text: model.lastSeen + " (" + model.count + ")"
             }
             LabelPL {
                 text: model.blocked ? qsTr("Blocked") : qsTr("Not blocked")
+                color: model.blocked ? "#b50000" : "#009100"
+                font.bold: true
                 font.pixelSize: styler.themeFontSizeSmall
             }
 
