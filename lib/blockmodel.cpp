@@ -137,12 +137,11 @@ void BlockModel::addItem(const QString& number, const QString& name, const QStri
 
     QSqlQuery query;
     query.prepare("INSERT INTO blocks (number, name, note, count, lastSeen, blocked) "
-                  "VALUES (:number, :name, :note, :count, :lastSeen, :blocked)");
+                  "VALUES (:number, :name, :note, :count, NOW(), :blocked)");
 
     query.bindValue(":number", number);
     query.bindValue(":name", name);
     query.bindValue(":note", note);
-    query.bindValue(":lastSeen", QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss"));
     query.bindValue(":blocked", blocked);
     query.bindValue(":count", 0);
 
@@ -156,8 +155,29 @@ void BlockModel::addItem(const QString& number, const QString& name, const QStri
 
 }
 
+void BlockModel::updateItem(const QString& oldnumber, const QString& number, const QString& name, const QString& note, bool blocked) {
 
-void BlockModel::upsertItem(const QString& number, const QString& name) {
+    QSqlQuery query;
+    query.prepare("UPDATE blocks SET number = :number, name = :name, note = :note, blocked = :blocked WHERE number = :oldnumber");
+
+    query.bindValue(":oldnumber", oldnumber);
+    query.bindValue(":number", number);
+    query.bindValue(":name", name);
+    query.bindValue(":note", note);
+    query.bindValue(":blocked", blocked);
+
+    if (!query.exec()) {
+        qWarning() << Q_FUNC_INFO << "Failed to update record in blocks table:" << query.lastError().text();
+    } else {
+        qDebug() << Q_FUNC_INFO << "Successfully updated item in blocks table:" << number << name;
+    }
+
+    loadAll();
+
+}
+
+
+void BlockModel::logCall(const QString& number, const QString& name) {
     QSqlQuery query;
     query.prepare(R"(
         INSERT INTO blocks (number, name, lastSeen, blocked)

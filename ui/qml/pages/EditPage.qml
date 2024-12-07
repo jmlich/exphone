@@ -7,11 +7,12 @@ PagePL  {
 
     title: (count < 0) ? qsTr("Add number") : qsTr("Update details")
 
-    property alias number: addNumber.text
-    property alias name: addName.text
-    property alias note: addNote.text
+    property string number: ""
+    property alias name: nameTextField.text
+    property alias note: noteTextField.text
     property string lastSeen
     property int count: -1
+    property alias blocked: blockedSwitch.checked
 
     Column {
         id: column
@@ -22,16 +23,17 @@ PagePL  {
 
 
         TextFieldPL {
-            id: addNumber
+            id: newNumberTextField
             placeholderText: qsTr("Number")
             inputMethodHints: Qt.ImhDialableCharactersOnly
+            text: page.number
         }
         TextFieldPL {
-            id: addName
+            id: nameTextField
             placeholderText: qsTr("Contact name")
         }
         TextFieldPL {
-            id: addNote
+            id: noteTextField
             placeholderText: qsTr("Note")
         }
 
@@ -47,14 +49,20 @@ PagePL  {
         }
 
         TextSwitchPL {
+            id: blockedSwitch
             text: qsTr("Blocked")
+            checked: true
         }
 
         ButtonPL {
             text: qsTr("Save")
             anchors.horizontalCenter: parent.horizontalCenter
             onClicked: {
-                BlockModel.addItem(addNumber.text, addName.text, addNote.text, true);
+                if (page.number === "") {
+                    BlockModel.addItem(newNumberTextField.text, nameTextField.text, noteTextField.text, blockedSwitch.checked);
+                } else {
+                    BlockModel.updateItem(page.number, newNumberTextField.text, nameTextField.text, noteTextField.text, blockedSwitch.checked);
+                }
                 app.pages.pop();
             }
         }

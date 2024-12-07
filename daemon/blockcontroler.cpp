@@ -28,7 +28,7 @@ void BlockControler::incomingCall(const QString &_callerId, const QString &calle
     QString callerId = _callerId;
     bool blocked = m_blockModel.isBlocked(callerId);
     qDebug() << Q_FUNC_INFO << callerId << callerName << blocked;
-    m_blockModel.upsertItem(callerId, callerName);
+    m_blockModel.logCall(callerId, callerName);
     if (blocked) {
 #if defined(MER_EDITION_SAILFISH) || defined(UUITK_EDITION)
         m_voiceCallController.hangup();
