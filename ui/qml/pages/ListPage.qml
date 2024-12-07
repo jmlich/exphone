@@ -57,6 +57,7 @@ PageListPL  {
     pageMenu: PageMenuPL {
         PageMenuItemPL {
             text: qsTr("Add number")
+            iconSource: styler.iconEdit
             onClicked: {
                 app.pages.push(Qt.resolvedUrl("EditPage.qml"))
             }

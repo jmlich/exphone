@@ -17,6 +17,7 @@ PagePL  {
         TextFieldPL {
             id: addNumber
             placeholderText: "number"
+            inputMethodHints: Qt.ImhDialableCharactersOnly
         }
         TextFieldPL {
             id: addName
