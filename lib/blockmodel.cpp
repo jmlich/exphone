@@ -101,7 +101,7 @@ void BlockModel::loadAll() {
     beginResetModel();
     m_blocks.clear();
 
-    QSqlQuery query("SELECT number, name, note, lastSeen, blocked, count FROM blocks ORDER BY name ASC");
+    QSqlQuery query("SELECT number, name, note, lastSeen, blocked, count FROM blocks ORDER BY lastSeen DESC");
 
     while (query.next()) {
         QString number = query.value(0).toString();
