@@ -19,6 +19,8 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     Q_PROPERTY(int count READ rowCount NOTIFY rowCountChanged)
+    Q_INVOKABLE QVariantMap get(int row) const;
+
 
     Q_INVOKABLE void addItem(const QString& number, const QString& name, const QString& note, bool blocked);
     Q_INVOKABLE void upsertItem(const QString& number, const QString& name);

@@ -45,6 +45,24 @@ int BlockModel::rowCount(const QModelIndex &) const{
     return m_blocks.count();
 }
 
+QVariantMap BlockModel::get(int row) const {
+    if (row < 0 || row >= m_blocks.size()) {
+        return QVariantMap();
+    }
+
+    QVariantMap data;
+
+    data["number"] = m_blocks.at(row).number();
+    data["name"] = m_blocks.at(row).name();
+    data["note"] = m_blocks.at(row).note();
+    data["lastSeen"] = m_blocks.at(row).lastSeen();
+    data["blocked"] = m_blocks.at(row).blocked();
+    data["count"] = m_blocks.at(row).count();
+
+    return data;
+}
+
+
 void BlockModel::initDb() {
     QDir appDataDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
 
