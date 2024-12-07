@@ -33,6 +33,8 @@ public:
 private:
     QList<BlockItem> m_blocks;
 
+    void deleteOldEntries(); // part of initDb()
+
     enum BlockModelRoles {
         NumberRole = Qt::UserRole + 1,
         NameRole,

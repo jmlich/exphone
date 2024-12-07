@@ -74,6 +74,8 @@ void BlockModel::initDb() {
                "lastSeen DATETIME DEFAULT CURRENT_TIMESTAMP,"
                "blocked BOOLEAN DEFAULT 0,"
                "count INT DEFAULT 0)");
+
+    deleteOldEntries();
 }
 
 void BlockModel::loadAll() {
@@ -98,6 +100,20 @@ void BlockModel::loadAll() {
     qDebug() << Q_FUNC_INFO << m_blocks.count();
 
 }
+
+
+void BlockModel::deleteOldEntries() {
+    QSqlQuery query;
+
+    query.prepare("DELETE FROM blocks WHERE lastSeen < DATETIME('now', '-1 month') AND blocked = 0");
+
+    if (!query.exec()) {
+        qWarning() << Q_FUNC_INFO << "Failed to delete old entries from blocks table:" << query.lastError().text();
+    } else {
+        qDebug() << Q_FUNC_INFO << "Successfully deleted old entries from blocks table.";
+    }
+}
+
 
 void BlockModel::addItem(const QString& number, const QString& name, const QString& note, bool blocked) {
 
