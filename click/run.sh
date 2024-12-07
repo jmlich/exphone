@@ -23,7 +23,7 @@ WantedBy=default.target
 
 EOF
 
-    /usr/bin/systemctl daemon-reload
+    /usr/bin/systemctl --user daemon-reload
     /usr/bin/systemctl --user enable exphoned.service
     /usr/bin/systemctl --user start exphoned.service
 
