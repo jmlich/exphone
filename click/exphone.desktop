@@ -4,4 +4,4 @@ Icon=exphone.png
 Exec=./bin/run.sh
 Name=exPhone
 X-Ubuntu-Touch=true
-X-Ubuntu-Splash-Color=#F5F5F5
+X-Ubuntu-Splash-Color=#c1bfae
