@@ -58,7 +58,9 @@ void BlockModel::initDb() {
     }
 
     QSqlDatabase m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName(appDataDir.filePath(DB_FILE));
+    QString appDataDirFilePath = appDataDir.filePath(DB_FILE);
+    qDebug() << "Loading database from" << appDataDirFilePath;
+    m_db.setDatabaseName(appDataDirFilePath);
 
     if (!m_db.open()) {
         qFatal("Failed to open database: %s", qPrintable(m_db.lastError().text()));

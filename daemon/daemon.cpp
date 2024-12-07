@@ -40,7 +40,8 @@ int main(int argc, char **argv)
     qInstallMessageHandler(myMessageOutput);
     QCoreApplication app(argc, argv);
     QCoreApplication::setApplicationName("exphone");
-
+    QCoreApplication::setOrganizationName("exphone");
+    QCoreApplication::setOrganizationDomain("com.github.jmlich");
     daemonize();
 
     setlinebuf(stdout);
