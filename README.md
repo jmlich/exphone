@@ -9,6 +9,9 @@ Currently, it operates completely offline—no online blacklists or external ser
 
 To make things even easier, exphone creates its own call history. You don’t need to rewrite phone numbers manually—just select a number from the history and enable blocking.
 
+![screenshot-listpage](https://github.com/jmlich/exphone/raw/master/screenshots/listpage.png)
+![screenshot-editpage](https://github.com/jmlich/exphone/raw/master/screenshots/editpage.png)
+
 ## Contribute
 
 * [Translate](https://app.transifex.com/jozef-mlich/exphone/)
