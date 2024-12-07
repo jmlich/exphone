@@ -70,8 +70,8 @@ void BlockModel::initDb() {
     QSqlQuery query;
     query.exec("CREATE TABLE IF NOT EXISTS blocks ("
                "number VARCHAR(32) PRIMARY KEY NOT NULL,"
-               "name VARCHAR(32) NOT NULL DEFAULT '',"
-               "note VARCHAR(32) NOT NULL DEFAULT '',"
+               "name VARCHAR(32) DEFAULT '',"
+               "note VARCHAR(32) DEFAULT '',"
                "lastSeen DATETIME DEFAULT CURRENT_TIMESTAMP,"
                "blocked BOOLEAN DEFAULT 0,"
                "count INT DEFAULT 0)");
