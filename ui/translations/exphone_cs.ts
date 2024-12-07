@@ -16,14 +16,14 @@
     <message>
         <location filename="../qml/pages/EditPage.qml" line="27"/>
         <location filename="../qml/pages/EditPage.qml" line="27"/>
-        <source>Number</source>
-        <translation>Číslo</translation>
+        <source>Phone number</source>
+        <translation>Telefonní číslo</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="33"/>
         <location filename="../qml/pages/EditPage.qml" line="33"/>
-        <source>Contact name</source>
-        <translation>Jméno kontaktu</translation>
+        <source>Name</source>
+        <translation>Jméno</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="37"/>
