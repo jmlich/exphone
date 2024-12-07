@@ -46,6 +46,12 @@ int main(int argc, char *argv[])
 
 #endif
 
+    QCoreApplication::setOrganizationName("exphone");
+    QCoreApplication::setOrganizationDomain("com.github.jmlich");
+    QCoreApplication::setApplicationName("exphone");
+    QGuiApplication::setApplicationDisplayName("exPhone");
+
+
     BlockModel blockmodel;
     blockmodel.initDb();
     blockmodel.loadAll();
@@ -67,7 +73,7 @@ int main(int argc, char *argv[])
     view->load(QUrl("qrc:/qml/exphone.qml"));
 
     if (QQuickWindow* window = qobject_cast<QQuickWindow*>(view->rootObjects().at(0))) {
-        window->setIcon(QIcon(":/icons/172x172/exphone.png"));
+        window->setIcon(QIcon(":/icons/256x256/exphone.png"));
     }
 
 //#endif

@@ -7,9 +7,16 @@ file(GLOB TS_FILES translation/*.ts)
 #}
 
 
+list(APPEND RESOURCES exphone.qrc)
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/platform-${FLAVOR}.qrc")
+    list(APPEND RESOURCES "platform-${FLAVOR}.qrc")
+else()
+    message(WARNING "Resource file 'platform-${FLAVOR}.qrc' not found. Proceeding without it.")
+endif()
+
 add_executable(exphone
   main.cpp
-  exphone.qrc
+  ${RESOURCES}
   ${TS_FILES}
 )
 
@@ -29,20 +36,17 @@ target_compile_definitions(exphone
 target_link_libraries(exphone
   PRIVATE exphone-lib libwatchfish Qt5::Core Qt5::Gui Qt5::Sql Qt5::Quick)
 
-
 install(FILES ${QM_FILES}
     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/exphone/translation")
 
 #install(FILES "exphone.desktop"
 #    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
 
-# install(FILES "icons/exphone.png"
-#     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/86x86/apps"
-#     RENAME "exphone.png")
+install(FILES "icons/256x256/exphone.png"
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/256x256/apps")
 
-# install(FILES "icons/exphone128.png"
-#    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/128x128/apps"
-#    RENAME "exphone.png")
+install(FILES "icons/512x512/exphone.png"
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/512x512/apps")
 
 # install(FILES "exphone.appdata.xml"
 #    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/metainfo")

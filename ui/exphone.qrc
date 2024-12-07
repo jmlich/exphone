@@ -1,6 +1,11 @@
 <RCC>
     <qresource prefix="/">
-        <file>qml/exphone.qml</file>
-        <file>icons/172x172/exphone.png</file>
+        <file>icons/256x256/exphone.png</file>
+        <file>icons/512x512/exphone.png</file>
+        <file>./qml/pages/ListPage.qml</file>
+        <file>./qml/pages/EditPage.qml</file>
+        <file>./qml/exphone.qml</file>
+
+        <file>qml/components/TruncationModes.qml</file>
     </qresource>
 </RCC>
