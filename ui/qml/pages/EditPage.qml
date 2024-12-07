@@ -24,13 +24,13 @@ PagePL  {
 
         TextFieldPL {
             id: newNumberTextField
-            placeholderText: qsTr("Number")
+            placeholderText: qsTr("Phone number")
             inputMethodHints: Qt.ImhDialableCharactersOnly
             text: page.number
         }
         TextFieldPL {
             id: nameTextField
-            placeholderText: qsTr("Contact name")
+            placeholderText: qsTr("Name")
         }
         TextFieldPL {
             id: noteTextField
