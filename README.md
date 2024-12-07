@@ -1,6 +1,6 @@
 # exPhone
 
-![logo](https://github.com/jmlich/exphone/raw/master/ui/icons/512x512/exphone.png)
+![logo](https://github.com/jmlich/exphone/raw/master/ui/icons/256x256/exphone.png)
 
 
 exPhone is a straightforward call-blocking app for Ubuntu Touch. It lets you manage a custom list of phone numbers that are instantly rejected, keeping spam and unwanted calls at bay.
