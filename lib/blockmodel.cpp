@@ -95,7 +95,7 @@ void BlockModel::loadAll() {
         m_blocks.append(BlockItem(number, name, note, lastSeen, blocked, count));
     }
     endResetModel();
-
+    emit rowCountChanged();
 }
 
 void BlockModel::addItem(const QString& number, const QString& name, const QString& note, bool blocked) {

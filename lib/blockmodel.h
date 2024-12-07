@@ -18,6 +18,8 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
+    Q_PROPERTY(int count READ rowCount NOTIFY rowCountChanged)
+
     Q_INVOKABLE void addItem(const QString& number, const QString& name, const QString& note, bool blocked);
     Q_INVOKABLE void upsertItem(const QString& number, const QString& name);
     Q_INVOKABLE void setBlocked(const QString& number, bool blocked);
@@ -41,7 +43,7 @@ private:
     };
 
 signals:
-
+    void rowCountChanged();
 
 };
 
