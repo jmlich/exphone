@@ -112,7 +112,7 @@ void BlockModel::addItem(const QString& number, const QString& name, const QStri
     query.bindValue(":count", 0);
 
     if (!query.exec()) {
-        qWarning() << "Failed to insert into blocks table:" << query.lastError().text();
+        qWarning() << Q_FUNC_INFO << "Failed to insert into blocks table:" << query.lastError().text();
     } else {
         qDebug() << "Successfully added item to blocks table:" << number << name;
     }
@@ -136,9 +136,9 @@ void BlockModel::upsertItem(const QString& number, const QString& name) {
     query.bindValue(":name", name);
 
     if (!query.exec()) {
-        qWarning() << "Failed to insert into blocks table:" << query.lastError().text();
+        qWarning() << Q_FUNC_INFO << "Failed to upsert into blocks table:" << query.lastError().text();
     } else {
-        qDebug() << "Successfully added item to blocks table:" << number << name;
+        qDebug() << "Successfully upserted item into blocks table:" << number << name;
     }
 
     loadAll();
@@ -154,9 +154,9 @@ void BlockModel::setBlocked(const QString& number, bool blocked) {
     query.bindValue(":number", number);
 
     if (!query.exec()) {
-        qWarning() << "Failed to insert into blocks table:" << query.lastError().text();
+        qWarning() << Q_FUNC_INFO << "Failed to update blocked settings:" << query.lastError().text();
     } else {
-        qDebug() << "Successfully added item to blocks table:" << number;
+        qDebug() << "Successfully set:" << number << " blocked "<< blocked;
     }
 
     loadAll();
@@ -168,9 +168,9 @@ void BlockModel::removeItem(const QString& number) {
     query.bindValue(":number", number);
 
     if (!query.exec()) {
-        qWarning() << "Failed to insert into blocks table:" << query.lastError().text();
+        qWarning() << Q_FUNC_INFO << "Failed to delete from blocks table:" << query.lastError().text();
     } else {
-        qDebug() << "Successfully added item to blocks table:" << number;
+        qDebug() << "Successfully removed item from blocks table:" << number;
     }
 
     loadAll();
