@@ -136,14 +136,14 @@ void BlockModel::deleteOldEntries() {
 void BlockModel::addItem(const QString& number, const QString& name, const QString& note, bool blocked) {
 
     QSqlQuery query;
-    query.prepare("INSERT INTO blocks (number, name, note, count, lastSeen, blocked) "
-                  "VALUES (:number, :name, :note, :count, NOW(), :blocked)");
+    query.prepare("INSERT INTO blocks (number, name, note, count, blocked) "
+                  "VALUES (:number, :name, :note, :count, :blocked)");
 
     query.bindValue(":number", number);
     query.bindValue(":name", name);
     query.bindValue(":note", note);
-    query.bindValue(":blocked", blocked);
     query.bindValue(":count", 0);
+    query.bindValue(":blocked", blocked);
 
     if (!query.exec()) {
         qWarning() << Q_FUNC_INFO << "Failed to insert into blocks table:" << query.lastError().text();

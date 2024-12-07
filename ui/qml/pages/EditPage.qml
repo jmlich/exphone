@@ -54,16 +54,30 @@ PagePL  {
             checked: true
         }
 
-        ButtonPL {
-            text: qsTr("Save")
-            anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: {
-                if (page.number === "") {
-                    BlockModel.addItem(newNumberTextField.text, nameTextField.text, noteTextField.text, blockedSwitch.checked);
-                } else {
-                    BlockModel.updateItem(page.number, newNumberTextField.text, nameTextField.text, noteTextField.text, blockedSwitch.checked);
+        Row {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.margins: styler.themePaddingMedium
+            spacing: styler.themePaddingLarge
+            ButtonPL {
+                text: qsTr("Save")
+                onClicked: {
+                    if (page.number === "") {
+                        BlockModel.addItem(newNumberTextField.text, nameTextField.text, noteTextField.text, blockedSwitch.checked);
+                    } else {
+                        BlockModel.updateItem(page.number, newNumberTextField.text, nameTextField.text, noteTextField.text, blockedSwitch.checked);
+                    }
+                    app.pages.pop();
                 }
-                app.pages.pop();
+            }
+
+            ButtonPL {
+                text: qsTr("Delete")
+                visible: page.number !== ""
+                onClicked: {
+                    BlockModel.removeItem(page.number)
+                    app.pages.pop();
+                }
             }
         }
     }
