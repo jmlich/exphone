@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="en">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en">
 <context>
     <name>EditPage</name>
     <message>
@@ -49,7 +47,7 @@
         <location filename="../qml/pages/EditPage.qml" line="53"/>
         <location filename="../qml/pages/EditPage.qml" line="53"/>
         <source>Blocking</source>
-        <translation type="unfinished"></translation>
+        <translation>Blocking</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="63"/>
