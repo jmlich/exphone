@@ -18,6 +18,10 @@
 
 #include "blockmodel.h"
 
+#ifndef TRANSLATION_FOLDER 
+#define TRANSLATION_FOLDER ""
+#endif
+
 int main(int argc, char *argv[])
 {
 
@@ -29,13 +33,13 @@ int main(int argc, char *argv[])
     app = new QGuiApplication(argc, argv);
 
     {
-        QString TRANSLATION_FOLDER = "."; // FIXME
         QString tr_path(TRANSLATION_FOLDER);
+
         if ( !tr_path.isEmpty() ) {
             QString locale = QLocale::system().name();
             QTranslator *translator = new QTranslator();
 
-            if ( !translator->load(QLocale(), "exphone", "-", tr_path) ) {
+            if ( !translator->load(QLocale(), "exphone", "_", tr_path) ) {
                 qWarning() << "Failed to load translation for " << locale << " " << tr_path;
             }
 

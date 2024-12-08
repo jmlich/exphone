@@ -1,11 +1,10 @@
 file(GLOB TS_FILES translations/*.ts)
 
-#flavor_uuitk {
-#    DEFINES += TRANSLATION_FOLDER=\\\"./translations\\\"
-#} else {
-#    DEFINES += TRANSLATION_FOLDER=\\\"$${PREFIX}/share/$${TARGET}/translations\\\"
-#}
 
+if(FLAVOR STREQUAL "uuitk")
+    add_definitions(-DTRANSLATION_FOLDER="./share/exphone/translations")
+# FIXME else()
+endif()
 
 list(APPEND RESOURCES exphone.qrc)
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/platform-${FLAVOR}.qrc")
@@ -28,7 +27,7 @@ QT5_CREATE_TRANSLATION(QT_FILES "${CMAKE_SOURCE_DIR}"
     OPTIONS "-no-obsolete")
 
 install(FILES ${QM_FILES}
-    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/exphone/translation")
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/exphone/translations")
 
 install(TARGETS exphone RUNTIME
         DESTINATION ${CMAKE_INSTALL_BINDIR})
@@ -38,9 +37,6 @@ target_compile_definitions(exphone
 
 target_link_libraries(exphone
   PRIVATE exphone-lib libwatchfish Qt5::Core Qt5::Gui Qt5::Sql Qt5::Quick)
-
-install(FILES ${QM_FILES}
-    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/exphone/translation")
 
 #install(FILES "exphone.desktop"
 #    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
