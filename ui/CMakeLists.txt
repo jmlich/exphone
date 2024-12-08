@@ -1,4 +1,4 @@
-file(GLOB TS_FILES translation/*.ts)
+file(GLOB TS_FILES translations/*.ts)
 
 #flavor_uuitk {
 #    DEFINES += TRANSLATION_FOLDER=\\\"./translations\\\"
@@ -26,6 +26,9 @@ add_dependencies(exphone translations)
 
 QT5_CREATE_TRANSLATION(QT_FILES "${CMAKE_SOURCE_DIR}"
     OPTIONS "-no-obsolete")
+
+install(FILES ${QM_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/exphone/translation")
 
 install(TARGETS exphone RUNTIME
         DESTINATION ${CMAKE_INSTALL_BINDIR})
