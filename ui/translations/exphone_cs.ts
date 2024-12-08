@@ -46,8 +46,8 @@
     <message>
         <location filename="../qml/pages/EditPage.qml" line="53"/>
         <location filename="../qml/pages/EditPage.qml" line="53"/>
-        <source>Blocked</source>
-        <translation>Blokováno</translation>
+        <source>Blocking</source>
+        <translation>Blokování</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="63"/>
