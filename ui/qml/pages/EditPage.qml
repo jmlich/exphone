@@ -50,7 +50,7 @@ PagePL  {
 
         TextSwitchPL {
             id: blockedSwitch
-            text: qsTr("Blocked")
+            text: qsTr("Blocking")
             checked: true
         }
 
