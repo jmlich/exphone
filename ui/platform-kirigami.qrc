@@ -43,5 +43,11 @@
 <file alias="./qml/components/platform/PagePL.qml">./qml/components/platform.kirigami/PagePL.qml</file>
 <file alias="./qml/components/platform/ApplicationWindowPL.qml">./qml/components/platform.kirigami/ApplicationWindowPL.qml</file>
 <file alias="./qml/components/platform/DialogPL.qml">./qml/components/platform.kirigami/DialogPL.qml</file>
+<file>./qml/components/Axis.qml</file>
+<file>./qml/components/DateNavigation.qml</file>
+<file>./qml/components/DeviceButton.qml</file>
+<file>./qml/components/DraggableItem.qml</file>
+<file>./qml/components/DraggableItemDropArea.qml</file>
+<file>./qml/components/TruncationModes.qml</file>
     </qresource>
 </RCC>

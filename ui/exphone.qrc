@@ -5,7 +5,5 @@
         <file>./qml/pages/ListPage.qml</file>
         <file>./qml/pages/EditPage.qml</file>
         <file>./qml/exphone.qml</file>
-
-        <file>qml/components/TruncationModes.qml</file>
     </qresource>
 </RCC>

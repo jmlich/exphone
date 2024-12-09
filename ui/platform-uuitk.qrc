@@ -44,5 +44,11 @@
 <file alias="./qml/components/platform/IconPL.qml">./qml/components/platform.uuitk/IconPL.qml</file>
 <file alias="./qml/components/platform/StylerPL.qml">./qml/components/platform.uuitk/StylerPL.qml</file>
 <file alias="./qml/components/platform/ApplicationWindowPL.qml">./qml/components/platform.uuitk/ApplicationWindowPL.qml</file>
+<file>./qml/components/Axis.qml</file>
+<file>./qml/components/DateNavigation.qml</file>
+<file>./qml/components/DeviceButton.qml</file>
+<file>./qml/components/DraggableItem.qml</file>
+<file>./qml/components/DraggableItemDropArea.qml</file>
+<file>./qml/components/TruncationModes.qml</file>
     </qresource>
 </RCC>
