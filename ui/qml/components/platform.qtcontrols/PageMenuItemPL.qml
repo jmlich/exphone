@@ -21,4 +21,5 @@ import QtQuick.Controls 2.2
 
 ToolButton {
     property string iconName // added for compatibility
+    property string iconSource // added for compatibility
 }
