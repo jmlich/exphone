@@ -49,7 +49,7 @@ CoverBackground {
         font.pixelSize: Theme.fontSizeLarge
         horizontalAlignment: Text.AlignHCenter
         lineHeight: 1.25
-        text: "Amazfish"
+        text: ""
         visible: !cover.showNarrative
     }
 
