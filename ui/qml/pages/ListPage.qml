@@ -9,7 +9,7 @@ PageListPL  {
     pageMenu: PageMenuPL {
         PageMenuItemPL {
             text: qsTr("Add number")
-            iconSource: styler.iconEdit
+            iconSource: styler.iconAdd
             onClicked: {
                 app.pages.push(Qt.resolvedUrl("EditPage.qml"), {})
             }
@@ -31,6 +31,10 @@ PageListPL  {
 
         Column {
             id: details
+            Item { // spacer
+                width: 1
+                height: styler.themePaddingSmall
+            }
             LabelPL {
                 text: model.note
                 font.pixelSize: styler.themeFontSizeLarge
@@ -53,6 +57,11 @@ PageListPL  {
                 color: model.blocked ? "#b50000" : "#009100"
                 font.bold: true
                 font.pixelSize: styler.themeFontSizeSmall
+            }
+
+            Item { // spacer
+                width: 1
+                height: styler.themePaddingSmall
             }
 
         }

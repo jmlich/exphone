@@ -5,7 +5,7 @@ import "../components/platform"
 PagePL  {
     id: page
 
-    title: (count < 0) ? qsTr("Add number") : qsTr("Update details")
+    title: (count < 0) ? qsTr("Add phone number") : qsTr("Update details")
 
     property string number: ""
     property alias name: nameTextField.text
@@ -22,29 +22,41 @@ PagePL  {
         spacing: styler.themePaddingLarge
 
 
+        LabelPL {
+            text: qsTr("Phone Number")
+        }
         TextFieldPL {
             id: newNumberTextField
-            placeholderText: qsTr("Phone number")
+            placeholderText: qsTr("+420123456789")
             inputMethodHints: Qt.ImhDialableCharactersOnly
             text: page.number
         }
-        TextFieldPL {
-            id: nameTextField
-            placeholderText: qsTr("Name")
+
+        LabelPL {
+            text: qsTr("Contact Name")
         }
         TextFieldPL {
+            id: nameTextField
+            placeholderText: qsTr("John Doe")
+        }
+
+        LabelPL {
+            text: qsTr("Reason for Blocking")
+        }
+
+        TextFieldPL {
             id: noteTextField
-            placeholderText: qsTr("Note")
+            placeholderText: qsTr("Spam, Phishing, Telemarketing, Abuse, ...")
         }
 
         LabelPL {
             id: countLabel
-            text: qsTr("Count: %1").arg(page.count)
+            text: qsTr("Calls: %1").arg(page.count)
             visible: page.count >= 0
         }
         LabelPL {
             id: lastSeenLabel
-            text: qsTr("Last seen: %1").arg(page.lastSeen)
+            text: qsTr("Last Call Date: %1").arg(page.lastSeen)
             visible: page.count >= 0
         }
 

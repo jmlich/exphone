@@ -65,6 +65,7 @@ QtObject {
     property string iconDeviceScan: "image://theme/toolkit_input-search"
 
 
+    property string iconAdd: "image://theme/add"
     property string iconStravaLogin: "image://theme/user-admin"
     property string iconUploadToStrava: "image://theme/share"
     property string iconDownloadData: "image://theme/transfer-progress-download"
