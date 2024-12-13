@@ -58,24 +58,26 @@
     <message>
         <location filename="../qml/pages/EditPage.qml" line="59"/>
         <location filename="../qml/pages/EditPage.qml" line="59"/>
-        <source>Last Call Date: %1</source>
-        <translation>Datum posledního hovoru: %1</translation>
+        <source>Last Call Date:
+%1</source>
+        <translation>Datum posledního hovoru:
+%1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="65"/>
-        <location filename="../qml/pages/EditPage.qml" line="65"/>
+        <location filename="../qml/pages/EditPage.qml" line="67"/>
+        <location filename="../qml/pages/EditPage.qml" line="67"/>
         <source>Blocking</source>
         <translation>Blokování</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="75"/>
-        <location filename="../qml/pages/EditPage.qml" line="75"/>
+        <location filename="../qml/pages/EditPage.qml" line="77"/>
+        <location filename="../qml/pages/EditPage.qml" line="77"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="87"/>
-        <location filename="../qml/pages/EditPage.qml" line="87"/>
+        <location filename="../qml/pages/EditPage.qml" line="89"/>
+        <location filename="../qml/pages/EditPage.qml" line="89"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
