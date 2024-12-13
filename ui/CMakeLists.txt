@@ -49,6 +49,3 @@ install(FILES "icons/512x512/exphone.png"
 
 # install(FILES "exphone.appdata.xml"
 #    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/metainfo")
-
-install(TARGETS exphone RUNTIME
-        DESTINATION ${CMAKE_INSTALL_BINDIR})
