@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="en">
 <context>
     <name>EditPage</name>
     <message>
@@ -58,24 +60,25 @@
     <message>
         <location filename="../qml/pages/EditPage.qml" line="59"/>
         <location filename="../qml/pages/EditPage.qml" line="59"/>
-        <source>Last Call Date: %1</source>
-        <translation>Last Call Date: %1</translation>
+        <source>Last Call Date:
+%1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="65"/>
-        <location filename="../qml/pages/EditPage.qml" line="65"/>
+        <location filename="../qml/pages/EditPage.qml" line="67"/>
+        <location filename="../qml/pages/EditPage.qml" line="67"/>
         <source>Blocking</source>
         <translation>Blocking</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="75"/>
-        <location filename="../qml/pages/EditPage.qml" line="75"/>
+        <location filename="../qml/pages/EditPage.qml" line="77"/>
+        <location filename="../qml/pages/EditPage.qml" line="77"/>
         <source>Save</source>
         <translation>Save</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="87"/>
-        <location filename="../qml/pages/EditPage.qml" line="87"/>
+        <location filename="../qml/pages/EditPage.qml" line="89"/>
+        <location filename="../qml/pages/EditPage.qml" line="89"/>
         <source>Delete</source>
         <translation>Delete</translation>
     </message>
