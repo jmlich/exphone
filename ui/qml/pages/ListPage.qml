@@ -50,7 +50,7 @@ PageListPL  {
                 visible: text !== ""
             }
             LabelPL {
-                text: model.lastSeen + " (" + model.count + ")"
+                text: getFormattedTime(model.lastSeen) + " • " + model.count
             }
             LabelPL {
                 text: model.blocked ? qsTr("Blocked") : qsTr("Not blocked")
@@ -66,6 +66,17 @@ PageListPL  {
 
         }
     }
+
+    function getFormattedTime(dateTime) {
+        var input = new Date(dateTime)
+        var diffInSeconds = (new Date() - input) / 1000;
+
+        if (diffInSeconds > 86400) { // More than a day
+            return input.toLocaleDateString(Qt.locale().name);
+        }
+        return Qt.formatDateTime(dateTime, "hh:mm");
+    }
+
 
 }
 
