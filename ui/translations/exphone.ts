@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="en">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en">
 <context>
     <name>EditPage</name>
     <message>
@@ -13,55 +11,55 @@
         <location filename="../qml/pages/EditPage.qml" line="8"/>
         <location filename="../qml/pages/EditPage.qml" line="8"/>
         <source>Add phone number</source>
-        <translation type="unfinished"></translation>
+        <translation>Add phone number</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="26"/>
         <location filename="../qml/pages/EditPage.qml" line="26"/>
         <source>Phone Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Phone Number</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="30"/>
         <location filename="../qml/pages/EditPage.qml" line="30"/>
         <source>+420123456789</source>
-        <translation type="unfinished"></translation>
+        <translation>+420123456789</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="36"/>
         <location filename="../qml/pages/EditPage.qml" line="36"/>
         <source>Contact Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Contact Name</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="40"/>
         <location filename="../qml/pages/EditPage.qml" line="40"/>
         <source>John Doe</source>
-        <translation type="unfinished"></translation>
+        <translation>John Doe</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="44"/>
         <location filename="../qml/pages/EditPage.qml" line="44"/>
         <source>Reason for Blocking</source>
-        <translation type="unfinished"></translation>
+        <translation>Reason for Blocking</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="49"/>
         <location filename="../qml/pages/EditPage.qml" line="49"/>
         <source>Spam, Phishing, Telemarketing, Abuse, ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Spam, Phishing, Telemarketing, Abuse, ...</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="54"/>
         <location filename="../qml/pages/EditPage.qml" line="54"/>
         <source>Calls: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Calls: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="59"/>
         <location filename="../qml/pages/EditPage.qml" line="59"/>
         <source>Last Call Date: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Last Call Date: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="65"/>
