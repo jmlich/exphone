@@ -1,12 +1,8 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="en">
 <context>
     <name>EditPage</name>
-    <message>
-        <location filename="../qml/pages/EditPage.qml" line="8"/>
-        <location filename="../qml/pages/EditPage.qml" line="8"/>
-        <source>Add number</source>
-        <translation>Add number</translation>
-    </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="8"/>
         <location filename="../qml/pages/EditPage.qml" line="8"/>
@@ -14,50 +10,74 @@
         <translation>Update details</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="27"/>
-        <location filename="../qml/pages/EditPage.qml" line="27"/>
-        <source>Phone number</source>
-        <translation>Phone number</translation>
+        <location filename="../qml/pages/EditPage.qml" line="8"/>
+        <location filename="../qml/pages/EditPage.qml" line="8"/>
+        <source>Add phone number</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="33"/>
-        <location filename="../qml/pages/EditPage.qml" line="33"/>
-        <source>Name</source>
-        <translation>Name</translation>
+        <location filename="../qml/pages/EditPage.qml" line="26"/>
+        <location filename="../qml/pages/EditPage.qml" line="26"/>
+        <source>Phone Number</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="37"/>
-        <location filename="../qml/pages/EditPage.qml" line="37"/>
-        <source>Note</source>
-        <translation>Note</translation>
+        <location filename="../qml/pages/EditPage.qml" line="30"/>
+        <location filename="../qml/pages/EditPage.qml" line="30"/>
+        <source>+420123456789</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="42"/>
-        <location filename="../qml/pages/EditPage.qml" line="42"/>
-        <source>Count: %1</source>
-        <translation>Count: %1</translation>
+        <location filename="../qml/pages/EditPage.qml" line="36"/>
+        <location filename="../qml/pages/EditPage.qml" line="36"/>
+        <source>Contact Name</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="47"/>
-        <location filename="../qml/pages/EditPage.qml" line="47"/>
-        <source>Last seen: %1</source>
-        <translation>Last seen: %1</translation>
+        <location filename="../qml/pages/EditPage.qml" line="40"/>
+        <location filename="../qml/pages/EditPage.qml" line="40"/>
+        <source>John Doe</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="53"/>
-        <location filename="../qml/pages/EditPage.qml" line="53"/>
+        <location filename="../qml/pages/EditPage.qml" line="44"/>
+        <location filename="../qml/pages/EditPage.qml" line="44"/>
+        <source>Reason for Blocking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EditPage.qml" line="49"/>
+        <location filename="../qml/pages/EditPage.qml" line="49"/>
+        <source>Spam, Phishing, Telemarketing, Abuse, ...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EditPage.qml" line="54"/>
+        <location filename="../qml/pages/EditPage.qml" line="54"/>
+        <source>Calls: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EditPage.qml" line="59"/>
+        <location filename="../qml/pages/EditPage.qml" line="59"/>
+        <source>Last Call Date: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EditPage.qml" line="65"/>
+        <location filename="../qml/pages/EditPage.qml" line="65"/>
         <source>Blocking</source>
         <translation>Blocking</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="63"/>
-        <location filename="../qml/pages/EditPage.qml" line="63"/>
+        <location filename="../qml/pages/EditPage.qml" line="75"/>
+        <location filename="../qml/pages/EditPage.qml" line="75"/>
         <source>Save</source>
         <translation>Save</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="75"/>
-        <location filename="../qml/pages/EditPage.qml" line="75"/>
+        <location filename="../qml/pages/EditPage.qml" line="87"/>
+        <location filename="../qml/pages/EditPage.qml" line="87"/>
         <source>Delete</source>
         <translation>Delete</translation>
     </message>
@@ -83,14 +103,14 @@
         <translation>No records, make phone call or add number manually</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="52"/>
-        <location filename="../qml/pages/ListPage.qml" line="52"/>
+        <location filename="../qml/pages/ListPage.qml" line="56"/>
+        <location filename="../qml/pages/ListPage.qml" line="56"/>
         <source>Blocked</source>
         <translation>Blocked</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="52"/>
-        <location filename="../qml/pages/ListPage.qml" line="52"/>
+        <location filename="../qml/pages/ListPage.qml" line="56"/>
+        <location filename="../qml/pages/ListPage.qml" line="56"/>
         <source>Not blocked</source>
         <translation>Not blocked</translation>
     </message>
