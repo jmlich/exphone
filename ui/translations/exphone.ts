@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="en">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en">
 <context>
     <name>EditPage</name>
     <message>
@@ -62,7 +60,8 @@
         <location filename="../qml/pages/EditPage.qml" line="59"/>
         <source>Last Call Date:
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Last Call Date:
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="67"/>
