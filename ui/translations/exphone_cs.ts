@@ -4,60 +4,78 @@
     <message>
         <location filename="../qml/pages/EditPage.qml" line="8"/>
         <location filename="../qml/pages/EditPage.qml" line="8"/>
-        <source>Add number</source>
-        <translation>Přidat číslo</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/EditPage.qml" line="8"/>
-        <location filename="../qml/pages/EditPage.qml" line="8"/>
         <source>Update details</source>
         <translation>Upravit podrobnosti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="27"/>
-        <location filename="../qml/pages/EditPage.qml" line="27"/>
-        <source>Phone number</source>
+        <location filename="../qml/pages/EditPage.qml" line="8"/>
+        <location filename="../qml/pages/EditPage.qml" line="8"/>
+        <source>Add phone number</source>
+        <translation>Přidat telefonní číslo</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EditPage.qml" line="26"/>
+        <location filename="../qml/pages/EditPage.qml" line="26"/>
+        <source>Phone Number</source>
         <translation>Telefonní číslo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="33"/>
-        <location filename="../qml/pages/EditPage.qml" line="33"/>
-        <source>Name</source>
-        <translation>Jméno</translation>
+        <location filename="../qml/pages/EditPage.qml" line="30"/>
+        <location filename="../qml/pages/EditPage.qml" line="30"/>
+        <source>+420123456789</source>
+        <translation>+420123456789</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="37"/>
-        <location filename="../qml/pages/EditPage.qml" line="37"/>
-        <source>Note</source>
-        <translation>Poznámka</translation>
+        <location filename="../qml/pages/EditPage.qml" line="36"/>
+        <location filename="../qml/pages/EditPage.qml" line="36"/>
+        <source>Contact Name</source>
+        <translation>Jméno kontaktu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="42"/>
-        <location filename="../qml/pages/EditPage.qml" line="42"/>
-        <source>Count: %1</source>
-        <translation>Počet: %1</translation>
+        <location filename="../qml/pages/EditPage.qml" line="40"/>
+        <location filename="../qml/pages/EditPage.qml" line="40"/>
+        <source>John Doe</source>
+        <translation>Josef Novák</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="47"/>
-        <location filename="../qml/pages/EditPage.qml" line="47"/>
-        <source>Last seen: %1</source>
-        <translation>Naposledy viděn: %1</translation>
+        <location filename="../qml/pages/EditPage.qml" line="44"/>
+        <location filename="../qml/pages/EditPage.qml" line="44"/>
+        <source>Reason for Blocking</source>
+        <translation>Důvod blokování</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="53"/>
-        <location filename="../qml/pages/EditPage.qml" line="53"/>
+        <location filename="../qml/pages/EditPage.qml" line="49"/>
+        <location filename="../qml/pages/EditPage.qml" line="49"/>
+        <source>Spam, Phishing, Telemarketing, Abuse, ...</source>
+        <translation>Spam, phishing, telemarketing, zneužívání, ... </translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EditPage.qml" line="54"/>
+        <location filename="../qml/pages/EditPage.qml" line="54"/>
+        <source>Calls: %1</source>
+        <translation>Volání: %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EditPage.qml" line="59"/>
+        <location filename="../qml/pages/EditPage.qml" line="59"/>
+        <source>Last Call Date: %1</source>
+        <translation>Datum posledního hovoru: %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EditPage.qml" line="65"/>
+        <location filename="../qml/pages/EditPage.qml" line="65"/>
         <source>Blocking</source>
         <translation>Blokování</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="63"/>
-        <location filename="../qml/pages/EditPage.qml" line="63"/>
+        <location filename="../qml/pages/EditPage.qml" line="75"/>
+        <location filename="../qml/pages/EditPage.qml" line="75"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EditPage.qml" line="75"/>
-        <location filename="../qml/pages/EditPage.qml" line="75"/>
+        <location filename="../qml/pages/EditPage.qml" line="87"/>
+        <location filename="../qml/pages/EditPage.qml" line="87"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
@@ -83,14 +101,14 @@
         <translation>Žádné záznamy. Zavolejte si nebo přidejte číslo ručně.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="52"/>
-        <location filename="../qml/pages/ListPage.qml" line="52"/>
+        <location filename="../qml/pages/ListPage.qml" line="56"/>
+        <location filename="../qml/pages/ListPage.qml" line="56"/>
         <source>Blocked</source>
         <translation>Blokováno</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="52"/>
-        <location filename="../qml/pages/ListPage.qml" line="52"/>
+        <location filename="../qml/pages/ListPage.qml" line="56"/>
+        <location filename="../qml/pages/ListPage.qml" line="56"/>
         <source>Not blocked</source>
         <translation>Neblokováno</translation>
     </message>
