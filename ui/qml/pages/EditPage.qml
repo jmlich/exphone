@@ -56,8 +56,10 @@ PagePL  {
         }
         LabelPL {
             id: lastSeenLabel
-            text: qsTr("Last Call Date: %1").arg(page.lastSeen)
+            text: qsTr("Last Call Date:\n%1").arg(Qt.formatDateTime(page.lastSeen, Qt.DefaultLocaleLongDate))
+            elide: Text.ElideRight
             visible: page.count >= 0
+            width: parent.width
         }
 
         TextSwitchPL {
