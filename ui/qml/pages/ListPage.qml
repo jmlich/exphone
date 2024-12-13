@@ -47,7 +47,7 @@ PageListPL  {
             LabelPL {
                 text: model.name
                 font.pixelSize: styler.themeFontSizeMedium
-                visible: text !== ""
+                visible: (text !== "") && (model.number !== model.name)
             }
             LabelPL {
                 text: getFormattedTime(model.lastSeen) + " • " + model.count
