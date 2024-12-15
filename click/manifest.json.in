@@ -9,7 +9,7 @@
             "desktop":  "exphone.desktop"
         }
     },
-    "version": "1.0.0",
+    "version": "1.0.1",
     "maintainer": "Jozef Mlich <jmlich83@gmail.com>",
     "framework" : "@CLICK_FRAMEWORK@"
 }
