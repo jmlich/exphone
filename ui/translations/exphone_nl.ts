@@ -29,7 +29,7 @@
         <location filename="../qml/pages/EditPage.qml" line="36"/>
         <location filename="../qml/pages/EditPage.qml" line="36"/>
         <source>Contact Name</source>
-        <translation>Naam van contactpersoon</translation>
+        <translation>Naam van persoon</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="40"/>
