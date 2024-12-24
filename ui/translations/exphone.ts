@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="en">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en">
 <context>
     <name>EditPage</name>
     <message>
@@ -86,7 +84,7 @@
     <message>
         <location filename="../qml/pages/ListPage.qml" line="19"/>
         <source>Settings</source>
-        <translation type="unfinished">Settings</translation>
+        <translation>Settings</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="30"/>
@@ -114,12 +112,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="19"/>
         <source>Block unknown numbers (Contacts)</source>
-        <translation type="unfinished"></translation>
+        <translation>Block unknown numbers (Contacts)</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="24"/>
         <source>Block anonymous numbers (CLIR)</source>
-        <translation type="unfinished"></translation>
+        <translation>Block anonymous numbers (CLIR)</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="28"/>
