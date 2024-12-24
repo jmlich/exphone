@@ -56,6 +56,7 @@ QtObject {
     property real themeIconSizeSmall: 1.5*themeFontSizeLarge
     // used icons
     property string iconAdd: "add"
+    property string iconSettings: "settings-configure"
     property string iconAbout: "help-about-symbolic"
     property string iconBack: "go-previous-symbolic"
     property string iconClear: "edit-clear-all-symbolic"

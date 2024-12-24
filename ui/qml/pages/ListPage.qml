@@ -14,6 +14,14 @@ PageListPL  {
                 app.pages.push(Qt.resolvedUrl("EditPage.qml"), {})
             }
         }
+        // TODO: enable when implemented
+        // PageMenuItemPL {
+        //     text: qsTr("Settings")
+        //     iconSource: styler.iconSettings
+        //     onClicked: {
+        //         app.pages.push(Qt.resolvedUrl("SettingsPage.qml"), {})
+        //     }
+        // }
     }
 
     model: BlockModel

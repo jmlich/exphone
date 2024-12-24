@@ -17,6 +17,7 @@
 #include <QTranslator>
 
 #include "blockmodel.h"
+#include "exphoneconfig.h"
 
 #ifndef TRANSLATION_FOLDER 
 #define TRANSLATION_FOLDER ""
@@ -59,6 +60,9 @@ int main(int argc, char *argv[])
     BlockModel blockmodel;
     blockmodel.initDb();
     blockmodel.loadAll();
+
+    qmlRegisterSingletonType<ExphoneConfig>("com.github.jmlich.exphone", 1, 0, "ExphoneConfig", ExphoneConfig::qmlInstance);
+
 
 #ifdef MER_EDITION_SAILFISH
     QQuickView *view = SailfishApp::createView();

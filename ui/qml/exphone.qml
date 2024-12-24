@@ -2,6 +2,7 @@ import QtQuick 2.0
 import "./components/"
 import "./components/platform"
 import "./pages/"
+import com.github.jmlich.exphone 1.0
 
 ApplicationWindowPL {
     id: app

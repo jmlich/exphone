@@ -3,6 +3,8 @@ add_library(exphone-lib
   blockitem.h
   blockmodel.cpp
   blockmodel.h
+  exphoneconfig.cpp
+  exphoneconfig.h
 )
 
 target_include_directories(exphone-lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

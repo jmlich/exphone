@@ -66,6 +66,7 @@ QtObject {
 
 
     property string iconAdd: "image://theme/add"
+    property string iconSettings: "image://theme/settings"
     property string iconStravaLogin: "image://theme/user-admin"
     property string iconUploadToStrava: "image://theme/share"
     property string iconDownloadData: "image://theme/transfer-progress-download"
