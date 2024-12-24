@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="en">
 <context>
     <name>EditPage</name>
     <message>
@@ -87,17 +89,22 @@
         <translation>Settings</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="30"/>
+        <location filename="../qml/pages/ListPage.qml" line="29"/>
         <source>No records, make phone call or add number manually</source>
         <translation>No records, make phone call or add number manually</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="65"/>
+        <location filename="../qml/pages/ListPage.qml" line="53"/>
+        <source>Anonymous caller</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="71"/>
         <source>Blocked</source>
         <translation>Blocked</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="65"/>
+        <location filename="../qml/pages/ListPage.qml" line="71"/>
         <source>Not blocked</source>
         <translation>Not blocked</translation>
     </message>
