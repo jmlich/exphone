@@ -87,17 +87,22 @@
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="30"/>
+        <location filename="../qml/pages/ListPage.qml" line="29"/>
         <source>No records, make phone call or add number manually</source>
         <translation>Žádné záznamy. Zavolejte si nebo přidejte číslo ručně.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="65"/>
+        <location filename="../qml/pages/ListPage.qml" line="53"/>
+        <source>Anonymous caller</source>
+        <translation>Anonymní volající</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="71"/>
         <source>Blocked</source>
         <translation>Blokováno</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="65"/>
+        <location filename="../qml/pages/ListPage.qml" line="71"/>
         <source>Not blocked</source>
         <translation>Neblokováno</translation>
     </message>
