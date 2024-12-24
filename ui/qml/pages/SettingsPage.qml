@@ -16,14 +16,13 @@ PagePL  {
 
         TextSwitchPL {
             id: unknownSwitch
-            text: qsTr("Block unknown numbers")
+            text: qsTr("Block unknown numbers (Contacts)")
         }
 
         TextSwitchPL {
             id: anonymousSwitch
-            text: qsTr("Block anonymous numbers")
+            text: qsTr("Block anonymous numbers (CLIR)")
         }
-
 
         ButtonPL {
             text: qsTr("Save")

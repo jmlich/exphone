@@ -84,17 +84,22 @@
         <translation>Add number</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="29"/>
+        <location filename="../qml/pages/ListPage.qml" line="19"/>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="30"/>
         <source>No records, make phone call or add number manually</source>
         <translation>No records, make phone call or add number manually</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="64"/>
+        <location filename="../qml/pages/ListPage.qml" line="65"/>
         <source>Blocked</source>
         <translation>Blocked</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="64"/>
+        <location filename="../qml/pages/ListPage.qml" line="65"/>
         <source>Not blocked</source>
         <translation>Not blocked</translation>
     </message>
@@ -108,16 +113,16 @@
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="19"/>
-        <source>Block unknown numbers</source>
+        <source>Block unknown numbers (Contacts)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="24"/>
-        <source>Block anonymous numbers</source>
+        <source>Block anonymous numbers (CLIR)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="29"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="28"/>
         <source>Save</source>
         <translation type="unfinished">Save</translation>
     </message>
