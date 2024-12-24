@@ -27,16 +27,24 @@ void BlockControler::onRingingChanged() {
 void BlockControler::incomingCall(const QString &_callerId, const QString &callerName)
 {
     QString callerId = _callerId;
-    bool blocked = m_blockModel.isBlocked(callerId);
+    bool blocked = false;
     qDebug() << Q_FUNC_INFO << callerId << callerName << blocked;
-    m_blockModel.logCall(callerId, callerName);
 
-    if (ExphoneConfig::instance()->blockingCLIR()) {
-        qDebug() << "TODO clir";
+    bool isHiddenNumber = (callerId == "x-ofono-unknown");
+    if (isHiddenNumber && ExphoneConfig::instance()->blockingCLIR()) {
+        blocked = true;
     }
-    if (ExphoneConfig::instance()->blockingUnknown()) {
-        qDebug() << "TODO Unknown";
+
+    bool isUnknown = (callerId == callerName);
+    if (isUnknown && ExphoneConfig::instance()->blockingUnknown()) {
+        blocked = true;
     }
+
+    if (!blocked) {
+        blocked = m_blockModel.isBlocked(callerId);
+    }
+
+    m_blockModel.logCall(callerId, callerName);
 
     if (blocked) {
 #if defined(MER_EDITION_SAILFISH) || defined(UUITK_EDITION)
