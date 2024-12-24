@@ -18,7 +18,6 @@ PageListPL  {
         PageMenuItemPL {
             text: qsTr("Settings")
             iconSource: styler.iconSettings
-            visible: false // TODO: enable when implemented
             onClicked: {
                 app.pages.push(Qt.resolvedUrl("SettingsPage.qml"), {})
             }
@@ -31,8 +30,14 @@ PageListPL  {
 
     delegate: ListItemPL {
         contentHeight: details.height
+        property bool isHiddenNumber: (model.number === "x-ofono-unknown")
 
         onClicked: {
+            if (isHiddenNumber) {
+                app.pages.push(Qt.resolvedUrl("SettingsPage.qml"), {})
+                return;
+            }
+
             var item = BlockModel.get(index)
             console.log(JSON.stringify(item));
             app.pages.push(Qt.resolvedUrl("EditPage.qml"), item)
@@ -45,7 +50,7 @@ PageListPL  {
                 height: styler.themePaddingSmall
             }
             LabelPL {
-                text: model.note
+                text: isHiddenNumber ? qsTr("Anonymous caller") : model.note
                 font.pixelSize: styler.themeFontSizeLarge
                 visible: text !== ""
             }
@@ -56,13 +61,14 @@ PageListPL  {
             LabelPL {
                 text: model.name
                 font.pixelSize: styler.themeFontSizeMedium
-                visible: (text !== "") && (model.number !== model.name)
+                visible: !isHiddenNumber && (text !== "") && (model.number !== model.name)
             }
             LabelPL {
                 text: getFormattedTime(model.lastSeen) + " • " + model.count
             }
             LabelPL {
-                text: model.blocked ? qsTr("Blocked") : qsTr("Not blocked")
+                visible: !isHiddenNumber
+                text:  model.blocked ? qsTr("Blocked") : qsTr("Not blocked")
                 color: model.blocked ? "#b50000" : "#009100"
                 font.bold: true
                 font.pixelSize: styler.themeFontSizeSmall
