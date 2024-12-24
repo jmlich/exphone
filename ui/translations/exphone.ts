@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="en">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en">
 <context>
     <name>EditPage</name>
     <message>
@@ -104,22 +102,22 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="8"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Settings</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="19"/>
         <source>Block unknown numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Block unknown numbers</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="24"/>
         <source>Block anonymous numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Block anonymous numbers</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="29"/>
         <source>Save</source>
-        <translation type="unfinished">Save</translation>
+        <translation>Save</translation>
     </message>
 </context>
 </TS>
