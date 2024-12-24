@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="en">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en">
 <context>
     <name>EditPage</name>
     <message>
@@ -96,7 +94,7 @@
     <message>
         <location filename="../qml/pages/ListPage.qml" line="53"/>
         <source>Anonymous caller</source>
-        <translation type="unfinished"></translation>
+        <translation>Anonymous caller</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="71"/>
