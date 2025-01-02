@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="cs">
 <context>
     <name>BlockControler</name>
     <message>
@@ -13,7 +11,7 @@
         <location filename="../blockcontroler.cpp" line="75"/>
         <source>%1 (%2)</source>
         <extracomment>phone number and contact name formatted as &quot;%s (%s)&quot;</extracomment>
-        <translation>číslo %1 (kontakt %2)</translation>
+        <translation>%1 (%2)</translation>
     </message>
 </context>
 <context>

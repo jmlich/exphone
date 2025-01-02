@@ -10,4 +10,4 @@ git:
       file_format: QT
       source_language: en
       source_file: daemon/translations/exphoned.ts
-      translation_files_expression: 'datemon/translations/exphoned_<lang>.ts'
+      translation_files_expression: 'daemon/translations/exphoned_<lang>.ts'
