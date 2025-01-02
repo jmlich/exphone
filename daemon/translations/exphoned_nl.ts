@@ -19,7 +19,7 @@
     <message>
         <location filename="../blockcontroler.cpp" line="68"/>
         <source>Phone call was blocked</source>
-        <translation>De oproep is geblokkeerd</translation>
+        <translation>Er is een oproep geblokkeerd</translation>
     </message>
 </context>
 </TS>
