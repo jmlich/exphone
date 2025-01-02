@@ -22,6 +22,9 @@ private:
 
     void incomingCall(const QString &callerId, const QString &callerName);
 
+    void showNotification(const QString &callerId, const QString &callerName);
+
+
 public slots:
     void onRingingChanged();
 

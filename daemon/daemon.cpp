@@ -42,6 +42,28 @@ int main(int argc, char **argv)
     QCoreApplication::setApplicationName("exphone");
     QCoreApplication::setOrganizationName("exphone");
     QCoreApplication::setOrganizationDomain("com.github.jmlich");
+
+    {
+        QString tr_path(TRANSLATION_FOLDER);
+        if (QDir::isRelativePath(tr_path)) {
+            tr_path = QDir(QFileInfo(QCoreApplication::applicationFilePath()).absolutePath() + "/" + tr_path ).absolutePath();
+        }
+
+        QString locale = QLocale::system().name();
+        QTranslator *translator = new QTranslator();
+        if ( translator->load(QLocale(), "exphoned", "_", tr_path) ) {
+            if (app.installTranslator(translator)) {
+                qDebug() << "Install translation success for " << locale << " " << tr_path;
+            } else {
+                qWarning() << "Install translation failed for " << locale << " " << tr_path;
+            }
+        } else {
+            qWarning() << "Failed to load translation for " << locale << " " << tr_path;
+        }
+
+    }
+
+
     daemonize();
 
     setlinebuf(stdout);

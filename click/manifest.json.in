@@ -7,6 +7,10 @@
         "exphone": {
             "apparmor": "exphone.apparmor",
             "desktop":  "exphone.desktop"
+        },
+        "push": {
+            "apparmor": "exphone-push.apparmor",
+            "push-helper": "exphone-push-helper.json"
         }
     },
     "version": "1.0.1",

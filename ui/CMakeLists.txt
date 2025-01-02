@@ -1,9 +1,9 @@
 file(GLOB TS_FILES translations/*.ts)
 
-
 if(FLAVOR STREQUAL "uuitk")
-    add_definitions(-DTRANSLATION_FOLDER="./share/exphone/translations")
-# FIXME else()
+    add_definitions(-DTRANSLATION_FOLDER="../share/exphone/translations")
+else()
+    add_definitions(-DTRANSLATION_FOLDER=".")
 endif()
 
 list(APPEND RESOURCES exphone.qrc)
