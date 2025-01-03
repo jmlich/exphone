@@ -13,8 +13,6 @@ BlockControler::BlockControler(QObject *parent) :
 
     m_blockModel.initDb();
 
-    showNotification("+420123456789", "Phishing");
-
 #if defined(MER_EDITION_SAILFISH) || defined(UUITK_EDITION)
     connect(&m_voiceCallController, &watchfish::VoiceCallController::ringingChanged, this, &BlockControler::onRingingChanged);
 #endif
