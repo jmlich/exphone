@@ -38,16 +38,21 @@ void BlockControler::incomingCall(const QString &_callerId, const QString &calle
 
     bool isHiddenNumber = (callerId == "x-ofono-unknown");
     if (isHiddenNumber && ExphoneConfig::instance()->blockingCLIR()) {
+        //: Anonymous caller refers to CLIR/x-ofono-unknown
+        showNotification(tr("Anonymous caller"), QString());
         blocked = true;
     }
 
     bool isUnknown = (callerId == callerName);
     if (isUnknown && ExphoneConfig::instance()->blockingUnknown()) {
+        //: Unknown caller means caller which is not present in contact list
+        showNotification(callerId, tr("Unknown caller"));
         blocked = true;
     }
 
     if (!blocked) {
         blocked = m_blockModel.isBlocked(callerId);
+        showNotification(callerId, callerName);
     }
 
     m_blockModel.logCall(callerId, callerName);
@@ -56,7 +61,6 @@ void BlockControler::incomingCall(const QString &_callerId, const QString &calle
 #if defined(MER_EDITION_SAILFISH) || defined(UUITK_EDITION)
         m_voiceCallController.hangup();
 #endif
-        showNotification(callerId, callerName);
     }
 }
 
