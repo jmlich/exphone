@@ -108,6 +108,8 @@ void BlockModel::loadAll() {
         QString name = query.value(1).toString();
         QString note = query.value(2).toString();
         QDateTime lastSeen = query.value(3).toDateTime();
+        lastSeen.setTimeSpec(Qt::UTC);
+        lastSeen = lastSeen.toLocalTime();
         bool blocked = query.value(4).toBool();
         int count = query.value(5).toInt();
         m_blocks.append(BlockItem(number, name, note, lastSeen, blocked, count));
