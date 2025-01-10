@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="en">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en">
 <context>
     <name>BlockControler</name>
     <message>
         <location filename="../blockcontroler.cpp" line="42"/>
         <source>Anonymous caller</source>
         <extracomment>Anonymous caller refers to CLIR/x-ofono-unknown</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Anonymous caller</translation>
     </message>
     <message>
         <location filename="../blockcontroler.cpp" line="49"/>
         <source>Unknown caller</source>
         <extracomment>Unknown caller means caller which is not present in contact list</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Unknown caller</translation>
     </message>
     <message>
         <location filename="../blockcontroler.cpp" line="74"/>
