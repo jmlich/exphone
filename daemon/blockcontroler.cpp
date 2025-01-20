@@ -52,7 +52,9 @@ void BlockControler::incomingCall(const QString &_callerId, const QString &calle
 
     if (!blocked) {
         blocked = m_blockModel.isBlocked(callerId);
-        showNotification(callerId, callerName);
+        if (blocked) {
+            showNotification(callerId, callerName);
+        }
     }
 
     m_blockModel.logCall(callerId, callerName);
