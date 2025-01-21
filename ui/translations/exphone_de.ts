@@ -48,8 +48,9 @@
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="59"/>
-        <source>Last Call Date: %1</source>
-        <translation>Letzter Anruf: %1</translation>
+        <source>Last Call Date:
+%1</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="67"/>
