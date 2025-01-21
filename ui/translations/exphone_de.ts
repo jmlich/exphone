@@ -50,7 +50,7 @@
         <location filename="../qml/pages/EditPage.qml" line="59"/>
         <source>Last Call Date:
 %1</source>
-        <translation type="unfinished"/>
+        <translation>Letzter Anruf: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="67"/>
