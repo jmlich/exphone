@@ -1,5 +1,4 @@
-clickable_minimum_required: 8.0.0
-framework: ubuntu-sdk-20.04
+clickable_minimum_required: 8.4.0
 builder: cmake
 build_args:
 - -DFLAVOR=uuitk
