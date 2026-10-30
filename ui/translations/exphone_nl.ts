@@ -39,12 +39,12 @@
     <message>
         <location filename="../qml/pages/EditPage.qml" line="49"/>
         <source>Spam, Phishing, Telemarketing, Abuse, ...</source>
-        <translation>Spam, phishing, telemarketing, misbruik, …</translation>
+        <translation>Bijv. spam, phishing, telemarketing of misbruik</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="54"/>
         <source>Calls: %1</source>
-        <translation>Aantal oproepen: %¹</translation>
+        <translation>Aantal oproepen: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPage.qml" line="59"/>
@@ -89,12 +89,12 @@
     <message>
         <location filename="../qml/pages/ListPage.qml" line="29"/>
         <source>No records, make phone call or add number manually</source>
-        <translation>Er is nog geen oproepgeschiedenis. Bel een nummer of voeg er een toe.</translation>
+        <translation>Er is nog geen belgeschiedenis. Bel een nummer of voeg er een toe.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="53"/>
         <source>Anonymous caller</source>
-        <translation>Anonieme oproep</translation>
+        <translation>Anonieme beller</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="71"/>
